@@ -44,14 +44,14 @@ public class CompteBancaire {
 		this.tauxRemuneration = tauxRemuneration;
 	}
 	
-	/** Ajoute un montant au solde
+	/** Crédite un montant sur le compte
 	 * @param montant
 	 */
 	public void ajouterMontant(double montant){
 		this.solde += montant;
 	}
 	
-	/** Ajoute un montant au solde
+	/** Débite un montant sur le compte
 	 * @param montant
 	 */
 	public void debiterMontant(double montant){
@@ -63,10 +63,12 @@ public class CompteBancaire {
 		else if (type.equals("LA")){
 			if (this.solde - montant > 0){
 				this.solde = solde - montant;
-			}	
+			}
 		}
 	}
-	
+	/**
+	 * Permet de calculer la rémunération du livret A
+	 */
 	public void appliquerRemuAnnuelle(){
 		if (type.equals("LA")){
 			this.solde = solde + solde*tauxRemuneration/100;
