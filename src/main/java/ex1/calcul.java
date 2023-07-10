@@ -1,12 +1,26 @@
 package ex1;
 
+/**
+ *@author Pamela Calcei
+ */
 public class calcul {
-
-	public int get1(int a, int b){
+/**
+ * Additionne le paramètre a avec le paramètre b
+ * @param a
+ * @param b
+ * @return
+ */
+	public int Addition(int a, int b){
 		return a+b;
 	}
 	
-	public int get2(int a, int b){
+	/**
+	 * Soustrait le paramètre a avec le paramètre b
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	public int Soustraction(int a, int b){
 		return a-b;
 	}
 }
